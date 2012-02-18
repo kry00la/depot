@@ -46,15 +46,13 @@ class ProductsControllerTest < ActionController::TestCase
     put :update, id: @product.to_param, product: @product.attributes
      put :update, :id => @product.to_param, :product => @update
     assert_redirected_to product_path(assigns(:product))
-   
-
   end
 
   test "should destroy product" do
     assert_difference('Product.count', -1) do
       delete :destroy, id: @product.to_param
     end
-
+    
     assert_redirected_to products_path
   end
 end
