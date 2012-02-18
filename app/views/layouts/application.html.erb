@@ -13,13 +13,15 @@
 	</div>	
 		<div id="columns">
 			<div id="side" >
-				<a href="#" >Home</a><br />
-				<a href="#" >Questions</a><br />
-				<a href="#" >News</a><br />
-				<a href="#" >Contact</a><br />
+				<%= link_to "Home", store_path %>
+				<%= link_to "Contact", store_path %>
+				<%= link_to "Questions", store_path %>
+				<%= link_to "News", store_path %>
 					<div id="time">
 					<% @time = Time.now%>
 					<%= @time.to_s(:short) %>	
+					<br />
+					You've been here <%= pluralize(@count.to_i, "time") %>
 					</div>
 			</div>
 	
