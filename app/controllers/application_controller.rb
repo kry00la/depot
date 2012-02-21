@@ -18,5 +18,7 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  
+  # def clear_session
+    # session[:count] = nil
+  # end
 end

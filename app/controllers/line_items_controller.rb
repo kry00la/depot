@@ -79,10 +79,11 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
+    
 
     respond_to do |format|
-      format.html { redirect_to(line_items_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to current_cart }
+      format.xml  { head :no_content }
     end
   end
 end
