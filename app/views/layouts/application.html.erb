@@ -13,6 +13,9 @@
 	</div>	
 		<div id="columns">
 			<div id="side" >
+				<div id="cart" >
+					<%= render @cart %>
+				</div>
 				<%= link_to "Home", store_path %>
 				<%= link_to "Contact", store_path %>
 				<%= link_to "Questions", store_path %>
@@ -24,13 +27,15 @@
 					You've been here <%= pluralize(@count.to_i, "time") %>
 					</div>
 			</div>
-	
 				<div id="main">	
 					<%= yield %>
 				</div>
 		</div>	
 </body>
 </html>
+
+
+
 
 
 
