@@ -19,7 +19,6 @@ class Cart < ActiveRecord::Base
   def total_price
    Array.wrap(line_items).sum { |item| item.total_price }
   end
-  
    # def total_price
       # line_items.to_a.each(&:total_price).sum
    # end

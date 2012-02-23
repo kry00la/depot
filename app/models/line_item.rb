@@ -5,18 +5,14 @@ class LineItem < ActiveRecord::Base
   # def total_price
       # product.price = product.price * quantity
   # end
-
   
-
   def total_price
-  price * quantity
-=begin
+  #price * quantity
      if product.price 
         product.price * quantity
       else
          0.to_s.to_d
       end
-=end
    end
 
 =begin

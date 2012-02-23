@@ -43,7 +43,6 @@ class LineItemsController < ApplicationController
     @cart = current_cart
     product = Product.find(params[:product_id])
     @line_item =  @cart.add_product(product.id)
-
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to(@line_item.cart,
@@ -62,7 +61,7 @@ class LineItemsController < ApplicationController
   # PUT /line_items/1.xml
   def update
     @line_item = LineItem.find(params[:id])
-
+    
     respond_to do |format|
       if @line_item.update_attributes(params[:line_item])
         format.html { redirect_to(@line_item, :notice => 'Line item was successfully updated.') }

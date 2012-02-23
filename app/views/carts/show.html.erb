@@ -8,6 +8,8 @@
 	<td> <%= button_to "Delete item" , item, :method => :delete, :confirm => 'are u sure?'%></td>
 	</tr>
 	<% end %>
+
+	
 		<tr class="total_line" >
 		<td colspan="2" >Total</td>
 		<td class="total_cell" ><%= number_to_currency(@cart.total_price) %></td>
