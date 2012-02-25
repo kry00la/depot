@@ -89,6 +89,10 @@ class LineItemsController < ApplicationController
     # PUT /line_items/1
   # PUT /line_items/1.json
   def decrement
+    #destroy cart via jquery not yet done
+    # if current_cart.line_items.empty?
+    #   render "destroy"
+    # end
     @cart = current_cart
     # 1st way: decrement through method in @cart
     @line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
