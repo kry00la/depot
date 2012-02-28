@@ -1,7 +1,5 @@
-BUG:Adding items in cart first attemp cause error 
-adding items in second attemp working but first attemp not counted.
+BUG:bug fixed jquery problems
 
 NOTE: test unit and any test process are void in the project 
 the author understand the risk of a application without testing but since
-the application is just for prototyping and practice author will leave that 
-process "For now"
+the application is just for prototyping and practice author will leave that process "For now"
