@@ -28,10 +28,8 @@ prohibited this order from being saved:</h2>
 </div>
 <div>
 <%= f.label :pay_type, "Pay with:" %>
-<%=f.select :pay_type,
-	Order::PAYMENT_TYPES,
-	:prompt => "Select a payment method"
-%>
+<%= f.select :pay_type, PaymentType.names,
+             :prompt => 'Select a payment method' %>
 </div>
 <%= f.submit "Place Order" %>
 <% end %>

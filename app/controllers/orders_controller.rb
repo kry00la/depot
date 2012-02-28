@@ -56,6 +56,8 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        Notifier.order_received(@order).deliver
+        Notifier.order_shipped(@order).deliver
         format.html { redirect_to(store_url,:notice =>
           'thank you for your order.')}
         
